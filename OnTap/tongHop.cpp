@@ -9,7 +9,7 @@ void swap(int a, int b){
     b = tg;
 }
 
-//- Bresenham:
+//- Bresenham - Midpoint:
 /*
     +) m<-1:
     (Thuat toan)
@@ -150,36 +150,6 @@ void bresAmMotKhong(int x1, int y1, int x2, int y2, int mau){
             y--;
         }
         else    p += const1;
-        delay(5);
-    }
-}
-
-
-// mid point
-/*
-    (Thuat toan)
-    b1: dx = -(x2 - x1), dy = y2 - y1;
-        p = dx/2 + dy;
-        x = x1, y = y1;
-    b2: ve (x, y)
-    b3: x++
-    b4: if(p<0) p+=dy;
-        else    p+=dx+dy, y++;
-    b5: neu x <= x2 quay lai b3
-    b6: end
-*/
-void midPoint(int x1, int y1, int x2, int y2, int mau){
-    int dx = -(x2 - x1), dy = y2 - y1;
-    int p = dx/2 + dy;
-    int x = x1, y = y1;
-    while(x <= x2){
-        putpixel(x, y, mau);
-        x++;
-        if(p<0) p+=dy;
-        else{
-            p+=dx+dy;
-            y++;
-        }
         delay(5);
     }
 }
@@ -329,7 +299,6 @@ int main(){
         bresDuong(100, 100, 300, 300, 11);
         bresKhongMot(100, 100, 270, 270, 12);
         bresAmMotKhong(100, 100, 300, 300, 13);
-        midPoint(100, 100, 400, 450, 15);
 
         //duong tron
         midCircle(100, 100, 70, 17);
