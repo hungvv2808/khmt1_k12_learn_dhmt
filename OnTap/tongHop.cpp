@@ -247,48 +247,31 @@ void loang(int x, int y, int mauBien, int mauTo){
     quay lai b1
   b5: end
 */
-/*void toMauTheoDuongBien(int x, int y, int mauto, int maubien)
-{
+void toMauTheoDuongBien(int x, int y, int mauto, int maubien){
     int x1, x2;
-    do
-    {
-        x1 = x;
-        x2 = x;
-        while (getpixel(x1 - 1, y) != maubien)
-            x1--;
-        while (getpixel(x2 + 1, y) != maubien)
-            x2++;
-        //line
-        for (int i = x1; i <= x2; i++)
-            putpixel(i, y, mauto);
-        while (getpixel(x1, y + 1) == maubien)
-            x1++;
-        if (x1 <= x2)
-        {
-            x = x1;
-            y = y + 1;
-        }
+    do{
+      x1 = x; x2 = x;
+      while (getpixel(x1 - 1, y) != maubien)  x1--;
+      while (getpixel(x2 + 1, y) != maubien)  x2++;
+      for (int i = x1; i <= x2; i++)  putpixel(i, y, mauto);
+      while (getpixel(x1, y + 1) == maubien)  x1++;
+      if (x1 <= x2){
+          x = x1;
+          y = y + 1;
+      }
     } while (x1 <= x2);
     do{
-            x1 = x;
-            x2 = x;
-            while (getpixel(x1 - 1, y) != maubien)
-                x1--;
-            while (getpixel(x2 + 1, y) != maubien)
-                x2++;
-            //line
-            for (int i = x1; i <= x2; i++)
-                putpixel(i, y, mauto);
-            while (getpixel(x1, y - 1) == maubien)
-                x1++;
-            if (x1 <= x2)
-            {
-                x = x1;
-                y = y - 1;
-            }
-        }
-    while (x1 <= x2);
-}*/
+      x1 = x; x2 = x;
+      while (getpixel(x1 - 1, y) != maubien)  x1--;
+      while (getpixel(x2 + 1, y) != maubien)  x2++;
+      for (int i = x1; i <= x2; i++)  putpixel(i, y, mauto);
+      while (getpixel(x1, y - 1) == maubien)  x1++;
+      if (x1 <= x2){
+        x = x1;
+        y = y - 1;
+      }
+    } while (x1 <= x2);
+}
 
 int main(){
         int gd, gm = VGAMAX;
