@@ -272,7 +272,9 @@ void loang(int x, int y, int mauBien, int mauTo){
   b2: ve doan (x1, y) va (x2, y) bang mau to (mt)
   b3: Tinh diem phat trien tiep theo:
     while(mau(x1,y+i)=mb) x1=x1+1;
-  b4: neu x1 <= x2 quay lai b1
+  b4: neu x1 <= x2 thi:
+    x = x1, y+=i;
+    quay lai b1
   b5: end
 */
 /*void toMauTheoDuongBien(int x, int y, int mauto, int maubien)
