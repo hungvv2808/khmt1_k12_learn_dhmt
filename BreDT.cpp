@@ -37,5 +37,5 @@ int main(){
     gd = DETECT;
     initgraph(&gd, &gm, NULL);
     Bre1_dt(100, 100, 100, 15);
-    delay(1000);
+    delay(10);
 }
